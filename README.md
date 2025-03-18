@@ -1,3 +1,12 @@
+```
+git clone --recursive git@github.com:fpm-git/dragonfly.git
+cd dragonfly/
+export CR_PAT=ghp_EEEEEEE
+echo $CR_PAT | docker login ghcr.io -u username --password-stdin
+docker build -t ghcr.io/fpm-git/dragonfly:v1.28.0-5 . -f tools/packaging/Dockerfile.ubuntu-dev
+docker push ghcr.io/fpm-git/dragonfly:v1.28.0-5
+```
+
 <p align="center">
   <a href="https://dragonflydb.io">
     <img  src="/.github/images/logo-full.svg"
